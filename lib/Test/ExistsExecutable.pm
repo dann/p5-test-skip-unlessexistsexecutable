@@ -75,7 +75,7 @@ sub _which {
 
 =head1 NAME
 
-Test::RequiresExecutable - test if executable exists.
+Test::RequiresExecutable - test if executable exist
 
 =head1 SYNOPSIS
 
@@ -88,8 +88,7 @@ Test::RequiresExecutable - test if executable exists.
 
 =head1 DESCRIPTION
 
-Test::RequiresExecutable is
-
+Test::RequiresExecutable tests if executable exist
 
 =head1 SOURCE AVAILABILITY
 
