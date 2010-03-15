@@ -1,11 +1,11 @@
-This is Perl module Test::ExecutableRequires.
+This is Perl module Test::ExistsExecutable.
 
 INSTALLATION
 
-Test::ExecutableRequires installation is straightforward. If your CPAN shell is set up,
+Test::ExistsExecutable installation is straightforward. If your CPAN shell is set up,
 you should just be able to do
 
-    % cpan Test::ExecutableRequires
+    % cpan Test::ExistsExecutable
 
 Download it, unpack it, then build it as per the usual:
 
@@ -18,9 +18,9 @@ Then install it:
 
 DOCUMENTATION
 
-Test::ExecutableRequires documentation is available as in POD. So you can do:
+Test::ExistsExecutable documentation is available as in POD. So you can do:
 
-    % perldoc Test::ExecutableRequires
+    % perldoc Test::ExistsExecutable
 
 to read the documentation online with your favorite pager.
 

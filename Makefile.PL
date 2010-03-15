@@ -1,15 +1,8 @@
 use inc::Module::Install;
-name 'Test-ExecutableRequires';
-all_from 'lib/Test/ExecutableRequires.pm';
+name 'Test-ExistsExecutable';
+all_from 'lib/Test/ExistsExecutable.pm';
 
-requires(
-
-);
-test_requires(
-  'Test::More'                   => 0,
-  'Test::Class'                  => 0,
-  'Module::Install::AuthorTests' => 0,
-);
+build_requires 'Test::More';
 use_test_base;
 auto_include;
 WriteAll;
