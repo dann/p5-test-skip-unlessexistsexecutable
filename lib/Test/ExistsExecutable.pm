@@ -79,16 +79,25 @@ Test::RequiresExecutable - test if executable exist
 
 =head1 SYNOPSIS
 
-    use Test::More tests => 10;
+    use Test::More tests => 1;
     use Test::ExistsExecutable qw( 
         /usr/bin/rsync  
     );
     use_ok 'Mouse';
 
+    # or
+
+    use strict;
+    use warnings;
+    use Test::More tests => 1;
+    use Test::ExistsExecutable;
+
+    test_exists_executable '/bin/sh';
+    ok 1;
 
 =head1 DESCRIPTION
 
-Test::RequiresExecutable tests if executable exist
+Test::ExistsExecutable tests if executable exist
 
 =head1 SOURCE AVAILABILITY
 
