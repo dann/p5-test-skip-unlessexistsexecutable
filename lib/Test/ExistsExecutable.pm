@@ -4,7 +4,6 @@ use warnings;
 our $VERSION = '0.022';
 use base 'Test::Builder::Module';
 use 5.008000;
-use Config;
 use File::Spec;
 use File::Which qw(which);
 
