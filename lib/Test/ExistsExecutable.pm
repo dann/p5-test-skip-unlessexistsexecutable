@@ -1,7 +1,7 @@
 package Test::ExistsExecutable;
 use strict;
 use warnings;
-our $VERSION = '0.02';
+our $VERSION = '0.021';
 use base 'Test::Builder::Module';
 use 5.008000;
 use Config;
