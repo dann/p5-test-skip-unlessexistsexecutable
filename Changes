@@ -1,5 +1,9 @@
 Revision history for Perl extension Test::ExistsExecutable
 
+0.023 Mon Mar 17 23:59:00 2010
+	* removed unused module dependency 
+        * updated File::Which version
+
 0.022 Mon Mar 17 23:40:00 2010
 	* updated POD. 
           updated source availability and descrition
