@@ -1,12 +1,15 @@
 package Test::ExistsExecutable;
 use strict;
 use warnings;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 use base 'Test::Builder::Module';
 use 5.008000;
+use Config;
 use File::Spec;
+use File::Which qw(which);
 
 use constant WIN32 => $^O eq 'MSWin32';
+my $quote = WIN32 ? q/"/ : q/'/;
 
 sub import {
     my $class  = shift;
@@ -24,8 +27,8 @@ sub import {
 }
 
 sub test_exists_executable {
-    my ($executable) = @_;
-    my $found = _which($executable);
+    my $executable = shift;
+    my $found      = can_execute($executable);
 
     unless ($found) {
         my $skip_all = sub {
@@ -56,10 +59,20 @@ sub test_exists_executable {
     }
 }
 
-sub _which {
-    my ($path) = @_;
+sub can_execute {
+    my $path = shift;
 
-    my $quote = WIN32 ? q/"/ : q/'/;
+    if ( is_file_path($path) ) {
+        return can_execute_path($path);
+
+    }
+    else {
+        return which($path);
+    }
+}
+
+sub can_execute_path {
+    my $path = shift;
     if ( -x $path ) {
         if ( $path =~ /\s/ && $path !~ /^$quote/ ) {
             $path = "$quote$path$quote";
@@ -71,17 +84,29 @@ sub _which {
     }
 }
 
+sub is_file_path {
+    my $path = shift;
+    # hmm
+    my $dsep = "\/";
+    return 1 if $path =~ /$dsep/;
+}
+
+1;
+
+__END__
+
 =encoding utf-8
 
 =head1 NAME
 
-Test::RequiresExecutable - test if executable exist
+Test::ExistsExecutable - test if executable exist
 
 =head1 SYNOPSIS
 
     use Test::More tests => 1;
-    use Test::ExistsExecutable qw( 
-        /usr/bin/rsync  
+    use Test::ExistsExecutable qw(
+        /usr/bin/rsync
+        perl
     );
     use_ok 'Mouse';
 
@@ -93,6 +118,7 @@ Test::RequiresExecutable - test if executable exist
     use Test::ExistsExecutable;
 
     test_exists_executable '/bin/sh';
+    test_exists_executable 'perl';
     ok 1;
 
 =head1 DESCRIPTION
