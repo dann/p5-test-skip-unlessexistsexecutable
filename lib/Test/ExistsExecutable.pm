@@ -1,7 +1,7 @@
 package Test::ExistsExecutable;
 use strict;
 use warnings;
-our $VERSION = '0.021';
+our $VERSION = '0.022';
 use base 'Test::Builder::Module';
 use 5.008000;
 use Config;
@@ -86,6 +86,7 @@ sub can_execute_path {
 
 sub is_file_path {
     my $path = shift;
+
     # hmm
     my $dsep = "\/";
     return 1 if $path =~ /$dsep/;
@@ -99,7 +100,7 @@ __END__
 
 =head1 NAME
 
-Test::ExistsExecutable - test if executable exist
+Test::ExistsExecutable - test if executable exists
 
 =head1 SYNOPSIS
 
@@ -112,8 +113,6 @@ Test::ExistsExecutable - test if executable exist
 
     # or
 
-    use strict;
-    use warnings;
     use Test::More tests => 1;
     use Test::ExistsExecutable;
 
@@ -123,13 +122,16 @@ Test::ExistsExecutable - test if executable exist
 
 =head1 DESCRIPTION
 
-Test::ExistsExecutable tests if executable exist
+Test::ExistsExecutable tests if executable exist.
+Both Test::ExistsExecutable import method and test_exists_executable 
+method take the name of a program or the file path of executable.
+It checks if the program exists and is executable.
 
 =head1 SOURCE AVAILABILITY
 
 This source is in Github:
 
-  http://github.com/dann/
+  http://github.com/dann/p5-test-existsexecutable
 
 =head1 AUTHOR
 
