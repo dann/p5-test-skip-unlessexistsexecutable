@@ -1,5 +1,9 @@
 Revision history for Perl extension Test::ExistsExecutable
 
+0.022 Mon Mar 17 23:40:00 2010
+	* updated POD. 
+          updated source availability and descrition
+
 0.021 Mon Mar 17 13:00:00 2010
 	* Added pod
 
