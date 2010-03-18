@@ -99,7 +99,7 @@ __END__
 
 =head1 NAME
 
-Test::ExistsExecutable - test if executable exists
+Test::ExistsExecutable - skips tests unless executable exists
 
 =head1 SYNOPSIS
 
@@ -121,8 +121,17 @@ Test::ExistsExecutable - test if executable exists
 
 =head1 DESCRIPTION
 
-Test::ExistsExecutable tests if executable exist.
-Both Test::ExistsExecutable import method and test_exists_executable 
+Test::ExistsExecutable checks if an executable exist and skips the test if it
+does not. The intent is to avoid needing to write this sort of boilerplate code:
+
+    Test::More;
+    BEGIN {
+        do_i_have_all_my_optional_deps() ? plan skip_all : plan tests => 42
+    }
+
+=head1 INTERFACE
+
+Both Test::ExistsExecutable import method and test_exists_executable
 method take the name of a program or the file path of executable.
 It checks if the program exists and is executable.
 
