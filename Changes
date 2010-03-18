@@ -1,5 +1,9 @@
 Revision history for Perl extension Test::ExistsExecutable
 
+0.024 Mon Mar 18 20:17:00 2010
+        *  POD improvements; explain rationale/use case of
+           the module (daxim++)
+
 0.023 Mon Mar 17 23:59:00 2010
 	* removed unused module dependency 
         * updated File::Which version
