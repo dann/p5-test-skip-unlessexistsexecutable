@@ -1,4 +1,7 @@
-Revision history for Perl extension Test::ExistsExecutable
+Revision history for Perl extension Test::Skip::UnlessExistsExecutable
+
+0.03 Mon Mar 18 20:17:00 2010
+        * Renamed the module. 
 
 0.024 Mon Mar 18 20:17:00 2010
         *  POD improvements; explain rationale/use case of

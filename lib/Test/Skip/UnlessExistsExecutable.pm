@@ -1,7 +1,7 @@
-package Test::ExistsExecutable;
+package Test::Skip::UnlessExistsExecutable;
 use strict;
 use warnings;
-our $VERSION = '0.024';
+our $VERSION = '0.03';
 use base 'Test::Builder::Module';
 use 5.008000;
 use File::Spec;
@@ -99,7 +99,7 @@ __END__
 
 =head1 NAME
 
-Test::ExistsExecutable - skips tests unless executable exists
+Test::Skip::UnlessExistsExecutable - skips tests unless executable exists
 
 =head1 SYNOPSIS
 
@@ -121,7 +121,7 @@ Test::ExistsExecutable - skips tests unless executable exists
 
 =head1 DESCRIPTION
 
-Test::ExistsExecutable checks if an executable exist and skips the test if it
+Test::Skip::UnlessExistsExecutable checks if an executable exist and skips the test if it
 does not. The intent is to avoid needing to write this sort of boilerplate code:
 
     Test::More;
@@ -131,7 +131,7 @@ does not. The intent is to avoid needing to write this sort of boilerplate code:
 
 =head1 INTERFACE
 
-Both Test::ExistsExecutable import method and test_exists_executable
+Both Test::Skip::UnlessExistsExecutable import method and test_exists_executable
 method take the name of a program or the file path of executable.
 It checks if the program exists and is executable.
 
@@ -139,7 +139,7 @@ It checks if the program exists and is executable.
 
 This source is in Github:
 
-  http://github.com/dann/p5-test-existsexecutable
+  http://github.com/dann/p5-test-skip-unlessexistsexecutable
 
 =head1 AUTHOR
 

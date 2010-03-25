@@ -2,8 +2,8 @@ sub author_tests        { }
 sub auto_set_repository { }
 
 use inc::Module::Install;
-name 'Test-ExistsExecutable';
-all_from 'lib/Test/ExistsExecutable.pm';
+name 'Test-Skip-UnlessExistsExecutable';
+all_from 'lib/Test/Skip/UnlessExistsExecutable.pm';
 
 requires( 'File::Which' => 1.09, );
 build_requires 'Test::More';

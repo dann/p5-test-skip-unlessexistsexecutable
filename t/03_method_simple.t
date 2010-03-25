@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 use Test::More tests => 10;
-use Test::ExistsExecutable;
+use Test::Skip::UnlessExistsExecutable;
 
 test_exists_executable '/usr/bin/notfound';
 
