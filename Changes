@@ -1,6 +1,9 @@
 Revision history for Perl extension Test::Skip::UnlessExistsExecutable
 
-0.03 Mon Mar 18 20:17:00 2010
+0.04 Mon Mar 26 20:48:00 2010
+        * Changed API 
+
+0.03 Mon Mar 25 20:00:00 2010
         * Renamed the module. 
 
 0.024 Mon Mar 18 20:17:00 2010
