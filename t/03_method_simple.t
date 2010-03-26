@@ -3,6 +3,6 @@ use warnings;
 use Test::More tests => 10;
 use Test::Skip::UnlessExistsExecutable;
 
-test_exists_executable '/usr/bin/notfound';
+skip_all_unless_exists '/usr/bin/notfound';
 
 fail 'do not reach here';

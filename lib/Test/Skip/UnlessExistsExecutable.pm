@@ -17,15 +17,16 @@ sub import {
     # export methods
     {
         no strict 'refs';
-        *{"$caller\::test_exists_executable"} = \&test_exists_executable;
+        *{"$caller\::skip_all_unless_exists"} = \&skip_all_unless_exists;
+
     }
 
     for my $executable (@_) {
-        test_exists_executable($executable);
+        skip_all_unless_exists($executable);
     }
 }
 
-sub test_exists_executable {
+sub skip_all_unless_exists {
     my $executable = shift;
     my $found      = can_execute($executable);
 
@@ -104,7 +105,7 @@ Test::Skip::UnlessExistsExecutable - skips tests unless executable exists
 =head1 SYNOPSIS
 
     use Test::More tests => 1;
-    use Test::ExistsExecutable qw(
+    use Test::Skip::UnlessExistsExecutable qw(
         /usr/bin/rsync
         perl
     );
@@ -113,10 +114,10 @@ Test::Skip::UnlessExistsExecutable - skips tests unless executable exists
     # or
 
     use Test::More tests => 1;
-    use Test::ExistsExecutable;
+    use Test::Skip::UnlessExistsExecutable; 
 
-    test_exists_executable '/bin/sh';
-    test_exists_executable 'perl';
+    skip_all_unless_exists '/bin/sh';
+    skip_all_unless_exists 'perl';
     ok 1;
 
 =head1 DESCRIPTION

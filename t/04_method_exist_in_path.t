@@ -3,7 +3,7 @@ use warnings;
 use Test::More tests => 1;
 use Test::Skip::UnlessExistsExecutable;
 
-test_exists_executable '/bin/sh';
-test_exists_executable 'perl';
+skip_all_unless_exists '/bin/sh';
+skip_all_unless_exists 'perl';
 
 ok 1;
