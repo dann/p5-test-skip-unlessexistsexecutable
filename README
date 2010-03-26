@@ -1,11 +1,11 @@
-This is Perl module Test::ExistsExecutable.
+This is Perl module Test::Skip::UnlessExistsExecutable.
 
 INSTALLATION
 
-Test::ExistsExecutable installation is straightforward. If your CPAN shell is set up,
+Test::Skip::UnlessExistsExecutableinstallation is straightforward. If your CPAN shell is set up,
 you should just be able to do
 
-    % cpan Test::ExistsExecutable
+    % cpan Test::Skip::UnlessExistsExecutable
 
 Download it, unpack it, then build it as per the usual:
 
@@ -18,9 +18,9 @@ Then install it:
 
 DOCUMENTATION
 
-Test::ExistsExecutable documentation is available as in POD. So you can do:
+Test::Skip::UnlessExistsExecutable documentation is available as in POD. So you can do:
 
-    % perldoc Test::ExistsExecutable
+    % perldoc Test::Skip::UnlessExistsExecutable
 
 to read the documentation online with your favorite pager.
 
