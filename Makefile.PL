@@ -11,7 +11,10 @@ build_requires 'Test::More';
 tests('t/*.t');
 author_tests('xt');
 
-use_test_base;
-auto_include;
-auto_set_repository;
-WriteAll;
+{
+    no strict 'subs';
+    use_test_base;
+    auto_include;
+    auto_set_repository;
+    WriteAll;
+}
